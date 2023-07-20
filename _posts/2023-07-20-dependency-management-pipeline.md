@@ -13,7 +13,7 @@ Let's assume we will be using [SDL](https://www.libsdl.org/) library for handlin
 
 Luckily SDL provides it's releases on their [GitHub releases](https://github.com/libsdl-org/SDL/releases) page. We will be using ``FetchContent_Declare`` and ``FetchContent_MakeAvailable`` commands to download release version of SDL and extract it on specific directory.
 
-Basic example that downloads and extracts SDL for MSVC:
+Basic example that downloads and extracts SDL for MSVC compiler:
 ```cmake
 if (WIN32)
     set(SDL2_DOWNLOAD_URL "https://github.com/libsdl-org/SDL/releases/download/release-2.28.1/SDL2-devel-2.28.1-VC.zip")
