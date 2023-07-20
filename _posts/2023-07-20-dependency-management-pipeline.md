@@ -32,3 +32,26 @@ endif()
 The basic improvement to this script can be done by supporting other platforms and other compilers like GCC.
 
 With this simple chain of CMake commands, we are able to download and extract SDL library during build process. Which saves us from one of the repetitive tasks!
+
+### Informing CMake about SDL
+Next, we need a script to set some CMake variables that are related to SDL.
+
+The following script sets the listed variables below:
+- ``SDL2_INCLUDE_DIRS`` is set to path of the SDL's header files
+- ``SDL2_LIBRARIES`` is set to path of the SDL's library files
+
+The script also provides architecture checks to disable usage of x86 SDL library.
+
+```cmake
+set( SDL2_INCLUDE_DIRS "${CMAKE_SOURCE_DIR}/qmack/dependencies/SDL2/include/" )
+
+# Check if we are looking for x64 or x86 builds.
+if ( ${CMAKE_SIZEOF_VOID_P} MATCHES 8 )
+  set( SDL2_LIBRARIES "${CMAKE_SOURCE_DIR}/qmack/dependencies/SDL2/lib/x64/SDL2.lib;${CMAKE_SOURCE_DIR}/qmack/dependencies/SDL2/lib/x64/SDL2main.lib" )
+else()
+  message( FATAL_ERROR "Only x64 builds are allowed." )
+endif()
+
+string( STRIP "${SDL2_LIBRARIES}" SDL2_LIBRARIES )
+```
+
