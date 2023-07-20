@@ -1,1 +1,4 @@
 ﻿_site
+
+# Custom directories/folders
+.obsidian/
