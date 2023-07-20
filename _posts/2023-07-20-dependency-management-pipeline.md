@@ -8,6 +8,8 @@ Here is the basic overview for the initial dependency tasks I dealt with:
 
 Well, the list looks small but it starts to feel huge with every new project that I start. Repeating same tasks over and over again. Things needs to be automated, luckily CMake comes to rescue.
 
+Let's first take a look at downloading and extracting operations with CMake.
+
 ### Downloading the dependencies with CMake
 Let's assume we will be using [SDL](https://www.libsdl.org/) library for handling window creation stuff in our project. We will let CMake handle the integration part.
 
