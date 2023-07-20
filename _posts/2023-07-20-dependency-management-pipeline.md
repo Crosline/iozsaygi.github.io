@@ -12,7 +12,7 @@ Well, the list looks small but it starts to feel huge with every new project tha
 Let's assume we will be using [SDL](https://www.libsdl.org/) library for handling window creation stuff in our project.
 SDL provides it's releases on their [GitHub](https://github.com/libsdl-org/SDL/releases) page. We will be using ``FetchContent_Declare`` and ``FetchContent_MakeAvailable`` commands to download SDL and extract it on specific directory.
 
-_Here's the basic example that downloads and extracts SDL for MSVC:_
+_Basic example that downloads and extracts SDL for MSVC:_
 ```cmake
 if ( WIN32 )
     set( SDL2_DOWNLOAD_URL "https://github.com/libsdl-org/SDL/releases/download/release-2.28.1/SDL2-devel-2.28.1-VC.zip" )
@@ -27,3 +27,5 @@ else()
     message( FATAL_ERROR "Can not setup download path for dependencies in current platform." )
 endif()
 ```
+
+The basic improvement to this script can be done by supporting other platforms.
