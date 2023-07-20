@@ -41,6 +41,7 @@ We will be using CMake module for letting CMake know about SDL's source files.
 Make sure to update your CMake module path before using this script on build pipeline.
 
 Example code for updating CMake module path looks like this:
+
 ``set( CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/scripts/cmake/" )``
 
 The following script sets the listed variables below:
