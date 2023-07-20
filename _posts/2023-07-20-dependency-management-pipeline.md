@@ -40,7 +40,7 @@ The following script sets the listed variables below:
 - ``SDL2_INCLUDE_DIRS`` is set to path of the SDL's header files
 - ``SDL2_LIBRARIES`` is set to path of the SDL's library files
 
-The script also provides architecture checks to disable usage of x86 SDL library.
+The script also provides architectural checks to disable usage of x86 SDL library.
 
 ```cmake
 set( SDL2_INCLUDE_DIRS "${CMAKE_SOURCE_DIR}/qmack/dependencies/SDL2/include/" )
