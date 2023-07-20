@@ -8,14 +8,14 @@ Here is the basic overview for the initial dependency tasks I dealt with:
 
 Well, the list looks small but it starts to feel huge with every new project that I start. Repeating same tasks over and over again. Things needs to be automated, luckily CMake comes to rescue.
 
-Let's assume we will be using [SDL](https://www.libsdl.org/) library for handling window creation stuff in our project and we will let CMake handle the integration part.
+Let's assume we will be using [SDL](https://www.libsdl.org/) library for handling window creation stuff in our project.
 
 Well, first take a look at downloading and extracting operations with CMake.
 
 ### Downloading and extracting SDL with CMake
 SDL provides it's releases on their [GitHub releases](https://github.com/libsdl-org/SDL/releases) page. We will utilize ``FetchContent_Declare`` and ``FetchContent_MakeAvailable`` commands to download release version of SDL and extract it on specific directory.
 
-Basic example that downloads and extracts SDL for MSVC compiler looks like this:
+Basic example script for this task looks like this (For Windows and MSVC):
 ```cmake
 if ( WIN32 )
     set( SDL2_DOWNLOAD_URL "https://github.com/libsdl-org/SDL/releases/download/release-2.28.1/SDL2-devel-2.28.1-VC.zip" )
