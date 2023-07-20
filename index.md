@@ -1,5 +1,9 @@
-Here you can say lots of fun things about your site.
+Well, it's been a good while but finally here I am.
 
-Maybe say a some things about yourself.
+Took the first step and created my very first blog.
 
-Or maybe what you plan to blog about.
+Planning to share little stories about my game development journey.
+
+I hope you'll enjoy your stay here.
+
+
