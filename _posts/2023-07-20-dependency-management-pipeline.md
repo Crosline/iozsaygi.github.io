@@ -1,0 +1,1 @@
+First blog post, opening the scene with the simple [CMake](https://cmake.org/) hints.
