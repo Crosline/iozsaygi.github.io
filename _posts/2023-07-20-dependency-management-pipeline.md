@@ -14,17 +14,17 @@ SDL provides it's releases on their [GitHub](https://github.com/libsdl-org/SDL/r
 
 _Basic example that downloads and extracts SDL for MSVC:_
 ```cmake
-if ( WIN32 )
-    set( SDL2_DOWNLOAD_URL "https://github.com/libsdl-org/SDL/releases/download/release-2.28.1/SDL2-devel-2.28.1-VC.zip" )
-    set( SDL2_DOWNLOAD_PATH "${CMAKE_CURRENT_LIST_DIR}/dependencies" )
+if (WIN32)
+    set(SDL2_DOWNLOAD_URL "https://github.com/libsdl-org/SDL/releases/download/release-2.28.1/SDL2-devel-2.28.1-VC.zip")
+    set(SDL2_DOWNLOAD_PATH "${CMAKE_CURRENT_LIST_DIR}/dependencies")
 
-    include( FetchContent )
+    include(FetchContent)
 
-    message( STATUS "Downloading dependencies." )
-    FetchContent_Declare( SDL2 URL ${SDL2_DOWNLOAD_URL} SOURCE_DIR ${SDL2_DOWNLOAD_PATH}/SDL2 )
-    FetchContent_MakeAvailable( SDL2 )
+    message(STATUS "Downloading dependencies.")
+    FetchContent_Declare(SDL2 URL ${SDL2_DOWNLOAD_URL} SOURCE_DIR ${SDL2_DOWNLOAD_PATH}/SDL2)
+    FetchContent_MakeAvailable(SDL2)
 else()
-    message( FATAL_ERROR "Can not setup download path for dependencies in current platform." )
+    message(FATAL_ERROR "Can not setup download path for dependencies in current platform.")
 endif()
 ```
 
