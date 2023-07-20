@@ -81,5 +81,5 @@ These were the minimal script examples to automate some of the repetitive tasks 
 
 The full working example of this pipeline can be found in the 2D isometric engine that I am working on. You can check it out by visiting [Qmack Engine](https://github.com/iozsaygi/qmack-engine) repository.
 
-Thank you for reading my very first blog post. Hopefully, I will post even more blog posts about my game development journey.
+Thank you for reading my very first blog post. Hopefully, I will post even more blog posts in the future!
 
