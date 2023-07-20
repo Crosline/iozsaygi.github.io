@@ -71,8 +71,7 @@ We need specific CMake commands to use SDL in our source files.
 The command below adds the header files of SDL as include directories. Pretty simple.
 ``include_directories( ${SDL2_INCLUDE_DIRS} )``
 
-Now, to link SDL library files, we can use ``link libraries`` command.
-
+Now, to link SDL library files, we can use ``target_link_libraries`` command.
 ``target_link_libraries( qmack PRIVATE ${SDL2_LIBRARIES} )``
 
 In terms of SDL integration, most of the repetitive tasks should be automated at this point.
