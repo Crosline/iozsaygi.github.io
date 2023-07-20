@@ -6,9 +6,12 @@ email: "devozsaygi@gmail.com"
 github_username: "iozsaygi"
 youtube_username: "@iozsaygi"
 
-theme: "minima"
+timezone: Etc/UTC
+future: false
 
-rss: rss
+show_excerpts: false
+
+theme: "minima"
 
 kramdown:
   syntax_highlighter_opts:
@@ -28,3 +31,7 @@ defaults:
       type: post
     values:
       tags: Other
+
+kramdown:
+  syntax_highlighter_opts:
+    disable: true
