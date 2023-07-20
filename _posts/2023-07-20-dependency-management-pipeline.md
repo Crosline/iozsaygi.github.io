@@ -64,3 +64,8 @@ The command below links the header files for SDL to our build configuration.
 Now, to link SDL library files, we can use ``link libraries`` command.
 ``target_link_libraries( qmack PRIVATE ${SDL2_LIBRARIES} )``
 
+### Finishing words
+These were the minimal scripts for automating some of the essential dependency tasks in build pipeline. The full working version of this pipeline can be found on the 2D isometric engine that I am working on, the [Qmack Engine](https://github.com/iozsaygi/qmack-engine).
+
+Thank you for reading my very first blog post, hopefully the more posts will come in the future.
+
