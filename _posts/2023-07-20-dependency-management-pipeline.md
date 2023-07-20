@@ -62,6 +62,7 @@ The command below links the header files for SDL to our build configuration.
 ``include_directories( ${SDL2_INCLUDE_DIRS} )``
 
 Now, to link SDL library files, we can use ``link libraries`` command.
+
 ``target_link_libraries( qmack PRIVATE ${SDL2_LIBRARIES} )``
 
 ### Finishing words
