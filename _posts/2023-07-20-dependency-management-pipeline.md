@@ -40,7 +40,7 @@ The following script sets the listed variables below:
 - ``SDL2_INCLUDE_DIRS`` is set to path of the SDL's header files
 - ``SDL2_LIBRARIES`` is set to path of the SDL's library files
 
-The script also provides architectural checks to disable usage of x86 SDL library.
+The script also provides architectural checks to disable usage of ``x86`` bit SDL library.
 
 ```cmake
 set( SDL2_INCLUDE_DIRS "${CMAKE_SOURCE_DIR}/qmack/dependencies/SDL2/include/" )
@@ -54,4 +54,13 @@ endif()
 
 string( STRIP "${SDL2_LIBRARIES}" SDL2_LIBRARIES )
 ```
+
+### Linking SDL source files
+After setting CMake variables, we need to include source files of SDL library to our project.
+
+The command below links the header files for SDL to our build configuration.
+``include_directories( ${SDL2_INCLUDE_DIRS} )``
+
+Now, to link SDL library files to our project, we can use ``link libraries`` command.
+``target_link_libraries( qmack PRIVATE ${SDL2_LIBRARIES} )``
 
