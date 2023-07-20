@@ -2,18 +2,18 @@ First blog post, opening the scene with the simple [CMake](https://cmake.org/) h
 
 During the development of my hobby C/C++ projects, I found myself spending too much time on dependency management. Especially during the initial steps of project.
 
-_Here is the basic overview for the initial dependency tasks I dealt with:_
+Here is the basic overview for the initial dependency tasks I dealt with:
 * Download the release version of dependency by respecting the compiler I'll use
 * Configure the IDE that I'll be using for the dependency
 
 Well, the list looks small but it starts to feel huge with every new project that I start. Repeating same tasks over and over again. Things needs to be automated, luckily CMake comes to rescue.
 
-## Downloading the dependency with CMake
+### Downloading the dependency with CMake
 Let's assume we will be using [SDL](https://www.libsdl.org/) library for handling window creation stuff in our project.
 
 Luckily SDL provides it's releases on their [GitHub releases](https://github.com/libsdl-org/SDL/releases) page. We will be using ``FetchContent_Declare`` and ``FetchContent_MakeAvailable`` commands to download release version of SDL and extract it on specific directory.
 
-_Basic example that downloads and extracts SDL for MSVC:_
+Basic example that downloads and extracts SDL for MSVC:
 ```cmake
 if (WIN32)
     set(SDL2_DOWNLOAD_URL "https://github.com/libsdl-org/SDL/releases/download/release-2.28.1/SDL2-devel-2.28.1-VC.zip")
@@ -31,4 +31,4 @@ endif()
 
 The basic improvement to this script can be done by supporting other platforms and other compilers like GCC.
 
-With this simple chain of CMake commands, we are able to download and extract SDL library during build process. 
+With this simple chain of CMake commands, we are able to download and extract SDL library during build process. Which saves us from one of the repetitive tasks!
