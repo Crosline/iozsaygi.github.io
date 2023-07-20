@@ -11,7 +11,7 @@ Well, the list looks small but it starts to feel huge with every new project tha
 ### Downloading the dependency with CMake
 Let's assume we will be using [SDL](https://www.libsdl.org/) library for handling window creation stuff in our project.
 
-Luckily SDL provides it's releases on their [GitHub releases](https://github.com/libsdl-org/SDL/releases) page. We will be using ``FetchContent_Declare`` and ``FetchContent_MakeAvailable`` commands to download release version of SDL and extract it on specific directory.
+Luckily SDL provides it's releases on their [GitHub releases](https://github.com/libsdl-org/SDL/releases) page. We will utilize ``FetchContent_Declare`` and ``FetchContent_MakeAvailable`` commands to download release version of SDL and extract it on specific directory.
 
 Basic example that downloads and extracts SDL for MSVC compiler:
 ```cmake
