@@ -61,6 +61,6 @@ After setting CMake variables, we need to include source files of SDL library to
 The command below links the header files for SDL to our build configuration.
 ``include_directories( ${SDL2_INCLUDE_DIRS} )``
 
-Now, to link SDL library files to our project, we can use ``link libraries`` command.
+Now, to link SDL library files, we can use ``link libraries`` command.
 ``target_link_libraries( qmack PRIVATE ${SDL2_LIBRARIES} )``
 
