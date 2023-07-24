@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Dependency Management in CMake"
+description: "Taking a look at simple and automated dependency management trick in CMake."
+tag: Build, Dependency, DevOps, CMake
+---
 First blog post, opening the scene with the simple [CMake](https://cmake.org/) hints.
 
 During the development of my hobby C/C++ projects, I found myself spending too much time on dependency management. Especially during the initial steps of project.
